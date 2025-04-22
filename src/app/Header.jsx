@@ -5,12 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Images } from "./ui/images";
 import ThemeButton, { ButtonType } from "./components/ThemeButton";
-
+import { useRouter } from "next/navigation";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-
+  const router = useRouter();
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
   const toggleProductMenu = () => setIsProductMenuOpen((prev) => !prev);
@@ -46,7 +46,12 @@ const Header = () => {
           </div>
           <HeaderMenuNavItems />
           <div className="flex items-center gap-4">
-            <ThemeButton type={ButtonType.WHITE}>Log in</ThemeButton>
+            <ThemeButton
+              onClick={() => router.push("/login")}
+              type={ButtonType.WHITE}
+            >
+              Log in
+            </ThemeButton>
           </div>
           <div className="flex lg:hidden">
             <button

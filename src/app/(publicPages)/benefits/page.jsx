@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Accordion from "../components/Accordion";
-import ThemeButton, { ButtonType } from "../components/ThemeButton";
-import { Images } from "../ui/images";
+import Accordion from "../../components/Accordion";
+import ThemeButton, { ButtonType } from "../../components/ThemeButton";
+import { Images } from "../../ui/images";
 import Image from "next/image";
 
 const page = () => {

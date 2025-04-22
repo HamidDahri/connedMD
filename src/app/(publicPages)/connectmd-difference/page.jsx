@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import ThemeButton, { ButtonType } from "../components/ThemeButton";
-import { Images } from "../ui/images";
+import ThemeButton, { ButtonType } from "../../components/ThemeButton";
+import { Images } from "../../ui/images";
 import Image from "next/image";
-import ConnectmdIcon from "../../../public/svg/ConnectmdIcon";
+import ConnectmdIcon from "../../../../public/svg/ConnectmdIcon";
 
 const page = () => {
   return (

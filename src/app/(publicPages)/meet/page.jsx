@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import MedicalDashboardSwiper from "../components/MedicalDashboardSwiper";
-import { Images } from "../ui/images";
+import MedicalDashboardSwiper from "../../components/MedicalDashboardSwiper";
+import { Images } from "../../ui/images";
 import Image from "next/image";
-import ThemeButton, { ButtonType } from "../components/ThemeButton";
+import ThemeButton, { ButtonType } from "../../components/ThemeButton";
 
 const page = () => {
   const dashboardViews = [

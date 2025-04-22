@@ -1,7 +1,5 @@
 import { GoogFonts } from "./ui/fonts";
 import "./globals.css";
-import Header from "./Header";
-import Footer from "./Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +12,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${GoogFonts.Poppins.variable} ${GoogFonts.PlayFairDisplay.variable} antialiased poppins`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

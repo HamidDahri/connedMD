@@ -5,9 +5,10 @@ import Image from "next/image";
 import ThemeButton, { ButtonType } from "../../components/ThemeButton";
 import ThemeInput, { InputType } from "../../components/ThemeInput";
 import CheckBoxWithLabel from "../../components/CheckBoxWIthLabel";
-
+import { useRouter } from "next/navigation";
 const page = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const router = useRouter();
   return (
     <section className="w-full ">
       <div>
@@ -75,7 +76,7 @@ const page = () => {
               </div>
 
               <ThemeButton
-                onClick={() => console.log("validate")}
+                onClick={() => router.push("/")}
                 type={ButtonType.PRIMARY}
                 fullWidth
               >

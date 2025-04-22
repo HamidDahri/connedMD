@@ -1,8 +1,8 @@
 import React from "react";
-import ThemeButton, { ButtonType } from "../components/ThemeButton";
-import { Images } from "../ui/images";
+import ThemeButton, { ButtonType } from "../../components/ThemeButton";
+import { Images } from "../../ui/images";
 import Image from "next/image";
-import MedicalDashboardSwiper from "../components/MedicalDashboardSwiper";
+import MedicalDashboardSwiper from "../../components/MedicalDashboardSwiper";
 
 const page = () => {
   const dashboardViews = [
