@@ -10,14 +10,14 @@ const page = () => {
     {
       id: "condition-history",
       title: "Condition History",
-      imagePath: "/images/reviewSlide1.png",
-      thumbnailPath: "/images/reviewSlide1Thumb.png",
+      imagePath: "/images/slide5.png",
+      thumbnailPath: "/images/thumbSlide5.png",
     },
     {
       id: "vital-signs",
       title: "Vital Signs",
-      imagePath: "/images/slide1.png",
-      thumbnailPath: "/images/thumbSlide1.png",
+      imagePath: "/images/slide6.png",
+      thumbnailPath: "/images/thumbSlide6.png",
     },
   ];
   return (
@@ -94,7 +94,11 @@ const page = () => {
             <div className="order-2 h-full col-span-6 md:order-2">
               <div className="bg-gradient-to-tl rounded-4xl from-[#FCB69F] to-[#FFECD2]  ">
                 <div className="bg-[url(/images/LinePattern.svg)] p-8">
-                  <Image src={Images.Meet.careImg1} alt=""></Image>
+                  <Image
+                    src={Images.Meet.careImg1}
+                    className="w-full"
+                    alt=""
+                  ></Image>
                 </div>
               </div>
             </div>
@@ -115,7 +119,11 @@ const page = () => {
             <div className="order-4 h-full col-span-6 md:order-3">
               <div className="bg-gradient-to-tl rounded-4xl from-[#E6DEE9] to-[#FDCAF1]  ">
                 <div className="bg-[url(/images/LinePattern.svg)] p-8">
-                  <Image src={Images.Meet.careImg2} alt=""></Image>
+                  <Image
+                    src={Images.Meet.careImg2}
+                    className="w-full"
+                    alt=""
+                  ></Image>
                 </div>
               </div>
             </div>
@@ -137,7 +145,11 @@ const page = () => {
             <div className="order-6 h-full col-span-6 md:order-6">
               <div className="bg-gradient-to-tl rounded-4xl from-[#C1DFC4] to-[#DEECDD]  ">
                 <div className="bg-[url(/images/LinePattern.svg)] p-8">
-                  <Image src={Images.Meet.careImg3} alt=""></Image>
+                  <Image
+                    src={Images.Meet.careImg3}
+                    className="w-full"
+                    alt=""
+                  ></Image>
                 </div>
               </div>
             </div>

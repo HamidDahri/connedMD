@@ -1,8 +1,8 @@
 import aboutmockup from "/public/images/aboutMockup.png";
 import iconWhiteBG from '/public/images/whiteRoundedIcon.svg'
-import abt1 from '/public/images/about1.png'
-import abt2 from '/public/images/about2.png'
-import abt3 from '/public/images/about3.png'
+import abt1 from '/public/images/about1.svg'
+import abt2 from '/public/images/about2.svg'
+import abt3 from '/public/images/about3.svg'
 import whyMattersBanner from '/public/images/whyMattersBanner.png'
 import aboutFooterBanner from '/public/images/aboutFooterBanner.jpg'
 export const AboutImages = {

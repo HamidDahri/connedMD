@@ -15,20 +15,20 @@ const page = () => {
     {
       id: "vital-signs",
       title: "Vital Signs",
-      imagePath: "/images/slide1.png",
-      thumbnailPath: "/images/thumbSlide1.png",
+      imagePath: "/images/slide2.png",
+      thumbnailPath: "/images/thumbSlide2.png",
     },
     {
       id: "medication-history",
       title: "Medication History",
-      imagePath: "/images/slide1.png",
-      thumbnailPath: "/images/thumbSlide1.png",
+      imagePath: "/images/slide3.png",
+      thumbnailPath: "/images/thumbSlide3.png",
     },
     {
       id: "appointment-history",
       title: "Appointment History",
-      imagePath: "/images/slide1.png",
-      thumbnailPath: "/images/thumbSlide1.png",
+      imagePath: "/images/slide4.png",
+      thumbnailPath: "/images/thumbSlide4.png",
     },
   ];
   return (

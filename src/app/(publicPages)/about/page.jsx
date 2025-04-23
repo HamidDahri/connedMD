@@ -119,7 +119,9 @@ const page = () => {
             </div>
             <div className="px-24 py-12 bg-moon-mist rounded-b-4xl">
               <div className="flex items-center justify-center gap-3">
-                <ConnectmdIcon />
+                <span className="animate-spin">
+                  <ConnectmdIcon />
+                </span>
                 <h2 className="text-4xl font-bold text-center text-primaryExtraDark">
                   We’re here to change that.
                 </h2>
