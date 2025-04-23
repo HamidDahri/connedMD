@@ -37,9 +37,9 @@ const page = () => {
         <div className="container flex flex-col items-center justify-center md:pt-40 pt-28 pb-0 mx-auto max-w-[1320px]">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto md:gap-12">
             <div className="col-span-12 md:col-span-7 md:col-start-4">
-              <h1 className="text-3xl md:text-6xl font-semibold text-center text-gray-800 md:leading-[72px]">
+              <h1 className="text-3xl md:text-6xl font-bold text-center text-gray-800 md:leading-[72px]">
                 Expert Medical Insight,{" "}
-                <span className="italic text-secondary font-playfair">
+                <span className="italic font-extrabold text-secondary font-playfair">
                   Personalized
                 </span>{" "}
                 to You
@@ -47,8 +47,8 @@ const page = () => {
             </div>
             <div className="col-span-8 col-start-3">
               <p className="text-base text-center text-gray-800 md:text-lg">
-                ConnectMD connects you with a nationwide network of{" "}
-                <strong>2,000+</strong>
+                ConnectMD connects you with a nationwide network of
+                <strong className="px-2">2,000+</strong>
                 board-certified physicians who provide in-depth evaluations and
                 tailored care recommendations—based on your complete medical
                 history.
