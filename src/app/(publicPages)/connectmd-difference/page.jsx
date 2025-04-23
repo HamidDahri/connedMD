@@ -4,6 +4,7 @@ import ThemeButton, { ButtonType } from "../../components/ThemeButton";
 import { Images } from "../../ui/images";
 import Image from "next/image";
 import ConnectmdIcon from "../../../../public/svg/ConnectmdIcon";
+import AccordionScrollEffect from "../../components/AccordionScrollEffect";
 
 const page = () => {
   return (
@@ -35,8 +36,14 @@ const page = () => {
           </div>
         </div>
       </section>
+      <section className="container py-24 mx-auto">
+        {/* <h2 className="text-6xl font-semibold text-center text-gray-800">
+          What Sets Us Apart
+        </h2> */}
+        <AccordionScrollEffect />
+      </section>
 
-      <section className="py-24">
+      <section className="relative py-24">
         <div className="container flex flex-col gap-10 mx-auto">
           <h2 className="text-6xl font-semibold text-gray-800">
             Our Impact, In Real Terms
@@ -44,39 +51,43 @@ const page = () => {
 
           <div className="grid items-stretch grid-cols-12 gap-4">
             <div className="col-span-4">
-              <div className="flex items-center justify-center h-full p-8 cursor-pointer min-h-72 bg-primary rounded-3xl">
-                <ConnectmdIcon height="154" width="154" fill="#ffffff" />
+              <div className="flex items-center justify-center h-full p-8 cursor-pointer min-h-72 bg-gradient-to-b from-[#1E4E79] to-[#193956] rounded-3xl">
+                <span className="animate-spin">
+                  <ConnectmdIcon height="154" width="154" fill="#ffffff" />
+                </span>
               </div>
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100">
+              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100  group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
                 <Image
                   src={Images.connectmdDifference.termIcon1}
                   alt=""
                   className="drop-shadow-xl"
                 />
                 <div>
-                  <h2 className="text-3xl font-semibold text-slate-900">
+                  <h2 className="text-3xl font-semibold text-slate-900 group-hover:text-white">
                     Faster access
                   </h2>
-                  <p className="text-lg font-normal">to accurate diagnoses</p>
+                  <p className="text-lg font-normal group-hover:text-white">
+                    to accurate diagnoses
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100">
+              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100  group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
                 <Image
                   src={Images.connectmdDifference.termIcon2}
                   alt=""
                   className="drop-shadow-xl"
                 />
                 <div>
-                  <h2 className="text-3xl font-semibold text-slate-900">
+                  <h2 className="text-3xl font-semibold text-slate-900 group-hover:text-white">
                     Reduced frustration
                   </h2>
-                  <p className="text-lg font-normal">
+                  <p className="text-lg font-normal group-hover:text-white">
                     from navigating disjointed healthcare systems
                   </p>
                 </div>
@@ -84,17 +95,17 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100">
+              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
                 <Image
                   src={Images.connectmdDifference.termIcon3}
                   alt=""
                   className="drop-shadow-xl"
                 />
                 <div>
-                  <h2 className="text-3xl font-semibold text-slate-900">
+                  <h2 className="text-3xl font-semibold text-slate-900 group-hover:text-white">
                     Greater confidence
                   </h2>
-                  <p className="text-lg font-normal">
+                  <p className="text-lg font-normal group-hover:text-white">
                     in complex treatment decisions
                   </p>
                 </div>
@@ -102,17 +113,17 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100">
+              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
                 <Image
                   src={Images.connectmdDifference.termIcon4}
                   alt=""
                   className="drop-shadow-xl"
                 />
                 <div>
-                  <h2 className="text-3xl font-semibold text-slate-900">
+                  <h2 className="text-3xl font-semibold text-slate-900 group-hover:text-white">
                     Stronger partnerships
                   </h2>
-                  <p className="text-lg font-normal">
+                  <p className="text-lg font-normal group-hover:text-white">
                     between patients and providers
                   </p>
                 </div>
@@ -120,17 +131,17 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100">
+              <div className="relative flex flex-col w-full h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956]">
                 <Image
                   src={Images.connectmdDifference.termIcon5}
                   alt=""
                   className="drop-shadow-xl"
                 />
                 <div>
-                  <h2 className="text-3xl font-semibold text-slate-900">
+                  <h2 className="text-3xl font-semibold text-slate-900 group-hover:text-white">
                     Better health outcomes
                   </h2>
-                  <p className="text-lg font-normal">
+                  <p className="text-lg font-normal group-hover:text-white">
                     driven by complete, personalized care
                   </p>
                 </div>
@@ -140,7 +151,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className=" py-24 bg-woodSmoke rounded-4xl bg-[url(/images/differenceFooterBanner.jpg)] bg-right bg-contain bg-no-repeat">
+      <section className=" py-24 bg-woodSmoke rounded-4xl bg-[url(/images/differenceFooterBanner.jpg)] bg-right bg-contain bg-no-repeat relative">
         <div className="container mx-auto">
           <div className="grid items-center justify-center grid-cols-12 gap-4 ">
             <div className="flex flex-col col-span-6 gap-8">

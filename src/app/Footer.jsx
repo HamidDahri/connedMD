@@ -8,12 +8,12 @@ import ThemeButton, { ButtonType } from "./components/ThemeButton";
 function Footer() {
   return (
     <footer>
-      <div className="container pt-24 pb-16 mx-auto">
+      <div className="container relative pt-24 pb-16 mx-auto">
         <div className="grid grid-cols-12">
           <div className="flex flex-col items-center justify-center col-span-12 gap-6">
-            <div>
+            <Link className="" href="/home">
               <Image src={Images.Footer.logo} alt="" />
-            </div>
+            </Link>
 
             <div className="flex flex-wrap justify-center gap-4 my-4 text-base font-medium text-neutral-600">
               <Link
@@ -79,24 +79,24 @@ function Footer() {
             </div>
           </div>
           <div className="flex items-center justify-center col-span-12 gap-3 mb-3 text-neutral-600 md:col-span-6 lg:justify-end md:mb-auto">
-            <a
+            <Link
               href=""
               className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
             >
               Terms
-            </a>
-            <a
+            </Link>
+            <Link
               href=""
               className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
             >
               Privacy
-            </a>
-            <a
+            </Link>
+            <Link
               href=""
               className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
             >
               Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>
