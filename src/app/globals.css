@@ -51,6 +51,9 @@
   --color-woodSmoke: #0A0B0F;
   --color-alice-blue: #E9F8FF;
   --color-carbon-gray: #535862;
+  --color-cinder: #121212;
+  --color-cyanBlue: #193956;
+
   --text-lg2: 22px;
 
   --animate-spin: spin 30s linear infinite;
@@ -149,4 +152,17 @@ justify-content: center;
   border: solid #fff; 
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+
+@media (max-width: 786px) {
+  .swiper-button-next,
+.swiper-button-prev {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 12px !important;
+}
 }

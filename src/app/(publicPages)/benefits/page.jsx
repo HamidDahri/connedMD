@@ -41,7 +41,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className="rounded-4xl bg-gradient-to-r from-[#1E4E79] to-[#193956] py-24 relative overflow-hidden">
+      <section className="relative py-24 overflow-hidden rounded-4xl bg-gradient-to-r from-primary to-cyanBlue">
         <div className="container mx-auto">
           <div className="grid items-center justify-center grid-cols-12 gap-4 ">
             <div className="flex flex-col col-span-10 col-start-2 gap-8">

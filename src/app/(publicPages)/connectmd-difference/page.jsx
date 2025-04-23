@@ -51,7 +51,7 @@ const page = () => {
 
           <div className="grid items-stretch grid-cols-12 gap-4">
             <div className="col-span-4">
-              <div className="flex items-center justify-center h-full p-8 cursor-pointer min-h-72 bg-gradient-to-b from-[#1E4E79] to-[#193956] rounded-3xl">
+              <div className="flex items-center justify-center h-full p-8 cursor-pointer min-h-72 bg-gradient-to-b from-primary to-cyanBlue rounded-3xl">
                 <span className="animate-spin">
                   <ConnectmdIcon height="154" width="154" fill="#ffffff" />
                 </span>
@@ -59,7 +59,7 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100  group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
+              <div className="relative flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-primary to-cyanBlue">
                 <Image
                   src={Images.connectmdDifference.termIcon1}
                   alt=""
@@ -77,7 +77,7 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100  group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
+              <div className="relative flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-primary to-cyanBlue">
                 <Image
                   src={Images.connectmdDifference.termIcon2}
                   alt=""
@@ -95,7 +95,7 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
+              <div className="relative flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-primary to-cyanBlue">
                 <Image
                   src={Images.connectmdDifference.termIcon3}
                   alt=""
@@ -113,7 +113,7 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956] relative">
+              <div className="relative flex flex-col h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-primary to-cyanBlue">
                 <Image
                   src={Images.connectmdDifference.termIcon4}
                   alt=""
@@ -131,7 +131,7 @@ const page = () => {
             </div>
 
             <div className="col-span-4">
-              <div className="relative flex flex-col w-full h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-[#1E4E79] to-[#193956]">
+              <div className="relative flex flex-col w-full h-full gap-4 p-8 cursor-pointer min-h-72 rounded-3xl bg-slate-100 group hover:bg-gradient-to-b from-primary to-cyanBlue">
                 <Image
                   src={Images.connectmdDifference.termIcon5}
                   alt=""

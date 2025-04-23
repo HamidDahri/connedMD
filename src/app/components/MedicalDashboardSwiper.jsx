@@ -44,14 +44,16 @@ const MedicalDashboardSwiper = ({ dashboardViews = [] }) => {
               <div className="relative grid grid-cols-12 ">
                 {view.imagePath ? (
                   <div className="col-span-10 col-start-2">
-                    <Image
-                      className="!relative"
-                      src={view.imagePath}
-                      alt={view.title}
-                      layout="fill"
-                      objectFit="contain"
-                      priority={true}
-                    />
+                    <div className="w-full h-full">
+                      <Image
+                        className="!relative w-full h-full"
+                        src={view.imagePath}
+                        alt={view.title}
+                        width={500}
+                        height={500}
+                        priority={true}
+                      />
+                    </div>
                   </div>
                 ) : (
                   <div className="flex items-center justify-center w-full h-full">
@@ -71,7 +73,7 @@ const MedicalDashboardSwiper = ({ dashboardViews = [] }) => {
       </div>
 
       {/* Thumbnail Swiper */}
-      <div className="max-w-5xl mx-auto thumbnail-swiper-container">
+      <div className="hidden max-w-5xl mx-auto md:block thumbnail-swiper-container">
         <Swiper
           onSwiper={setThumbsSwiper}
           modules={[Thumbs]}
@@ -94,13 +96,15 @@ const MedicalDashboardSwiper = ({ dashboardViews = [] }) => {
               >
                 {view.thumbnailPath || view.imagePath ? (
                   // <div className="relative w-full h-full aspect-[4/3]">
-                  <Image
-                    src={view.thumbnailPath || view.imagePath}
-                    alt={`${view.title} thumbnail`}
-                    layout="fill"
-                    objectFit="contain"
-                    className="!relative h-full"
-                  />
+                  <div className="w-full h-full">
+                    <Image
+                      src={view.thumbnailPath || view.imagePath}
+                      alt={`${view.title} thumbnail`}
+                      width={400}
+                      height={400}
+                      className="!relative h-full w-full"
+                    />
+                  </div>
                 ) : (
                   // </div>
                   <div

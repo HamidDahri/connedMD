@@ -32,20 +32,27 @@ const Header = () => {
           isSticky ? "sticky top-0" : "absolute"
         } w-full md:pt-4 z-[99]`}
       >
-        <nav className="container flex items-center justify-between p-4 mx-auto shadow-xl bg-[#193956] backdrop-blur-xl md:rounded-full lg:px-5">
-          <div className="flex">
-            <Link href="/" className="-m-1.5 p-1.5">
+        <nav className="container flex items-center justify-between p-4 mx-auto bg-white shadow-xl md:bg-cyanBlue backdrop-blur-xl md:rounded-full lg:px-5">
+          <div className="flex items-center">
+            <Link href="/" className="">
               <span className="sr-only">Your Company</span>
               <Image
                 alt=""
-                className="h-12"
+                className="hidden h-12 md:block"
                 src={Images.Header.logo}
+                priority={true}
+              />
+
+              <Image
+                alt=""
+                className="h-8 w-52 md:hidden"
+                src={Images.Login.logo}
                 priority={true}
               />
             </Link>
           </div>
           <HeaderMenuNavItems />
-          <div className="flex items-center gap-4">
+          <div className="items-center hidden gap-4 md:flex">
             <ThemeButton
               onClick={() => router.push("/login")}
               type={ButtonType.WHITE}
@@ -56,22 +63,20 @@ const Header = () => {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
               onClick={toggleMenu}
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="w-6 h-6"
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
                 fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  d="M11.5 14.125C11.5 13.5156 11.9688 13 12.625 13H31.375C31.9844 13 32.5 13.5156 32.5 14.125C32.5 14.7812 31.9844 15.25 31.375 15.25H12.625C11.9688 15.25 11.5 14.7812 11.5 14.125ZM11.5 21.625C11.5 21.0156 11.9688 20.5 12.625 20.5H25.375C25.9844 20.5 26.5 21.0156 26.5 21.625C26.5 22.2812 25.9844 22.75 25.375 22.75H12.625C11.9688 22.75 11.5 22.2812 11.5 21.625ZM20.5 29.125C20.5 29.7812 19.9844 30.25 19.375 30.25H12.625C11.9688 30.25 11.5 29.7812 11.5 29.125C11.5 28.5156 11.9688 28 12.625 28H19.375C19.9844 28 20.5 28.5156 20.5 29.125Z"
+                  fill="black"
                 />
               </svg>
             </button>
@@ -79,7 +84,7 @@ const Header = () => {
         </nav>
 
         <div
-          className={`lg:hidden ${isMenuOpen ? "block" : "hidden"}`}
+          className={`lg:hidden  ${isMenuOpen ? "block" : "hidden"}`}
           role="dialog"
           aria-modal="true"
         >
@@ -89,15 +94,11 @@ const Header = () => {
             }`}
             onClick={closeMenu}
           ></div>
-          <div className="fixed inset-y-0 right-0 z-20 w-full p-4 overflow-y-auto bg-white md:px-6 md:py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
+          <div className="fixed inset-y-0 right-0 z-20 w-full p-4 px-4 overflow-y-auto bg-white md:px-6 md:py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between pt-1.5 ">
               <a href="#">
                 <span className="sr-only">Your Company</span>
-                <Image
-                  alt=""
-                  className="w-auto h-12"
-                  src={Images.Header.logo}
-                />
+                <Image alt="" className="h-8 w-52" src={Images.Login.logo} />
               </a>
               <button
                 type="button"
@@ -106,7 +107,7 @@ const Header = () => {
               >
                 <span className="sr-only">Close menu</span>
                 <svg
-                  className="w-6 h-6"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -123,117 +124,108 @@ const Header = () => {
             </div>
             <div className="flow-root mt-6">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="py-6 space-y-2">
+                <div className="px-4 py-6 ">
                   <Link
                     onClick={closeMenu}
-                    href="/"
-                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-100"
+                    href="/about"
+                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                   >
-                    Home
-                  </Link>
-                  <div className="-mx-3">
-                    <button
-                      type="button"
-                      className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      aria-controls="disclosure-1"
-                      aria-expanded={isProductMenuOpen}
-                      onClick={toggleProductMenu}
-                    >
-                      Partners
+                    About{" "}
+                    <span>
                       <svg
-                        className={`h-5 w-5 flex-none ${
-                          isProductMenuOpen ? "rotate-180" : ""
-                        }`}
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
+                        width="9"
+                        height="14"
+                        viewBox="0 0 9 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fillRule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clipRule="evenodd"
+                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
+                          fill="black"
                         />
                       </svg>
-                    </button>
-                    <div
-                      className={`mt-2 space-y-2 ${
-                        isProductMenuOpen ? "block" : "hidden"
-                      }`}
-                      id="disclosure-1"
-                    >
-                      <Link
-                        onClick={closeMenu}
-                        href="/countries"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Countries
-                      </Link>
-                      <Link
-                        onClick={closeMenu}
-                        href="/communities"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Communities
-                      </Link>
-                      <Link
-                        onClick={closeMenu}
-                        href="/schools"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Schools
-                      </Link>
-                      <Link
-                        onClick={closeMenu}
-                        href="/organizations"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Organizations
-                      </Link>
-                      <Link
-                        onClick={closeMenu}
-                        href="/nonprofits"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Nonprofits
-                      </Link>
-                      <Link
-                        onClick={closeMenu}
-                        href="/religious"
-                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                      >
-                        Religious Orgs
-                      </Link>
-                    </div>
-                  </div>
+                    </span>
+                  </Link>
+
                   <Link
                     onClick={closeMenu}
-                    href="/#faqs"
-                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-100"
+                    href="/meet"
+                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                   >
-                    FAQs
+                    Meet C.A.R.E.
+                    <span>
+                      <svg
+                        width="9"
+                        height="14"
+                        viewBox="0 0 9 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
                   </Link>
                   <Link
                     onClick={closeMenu}
-                    href="/news"
-                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-100"
+                    href="/connectmd_difference"
+                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                   >
-                    News
+                    ConnectMD Difference
+                    <span>
+                      <svg
+                        width="9"
+                        height="14"
+                        viewBox="0 0 9 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
                   </Link>
                   <Link
                     onClick={closeMenu}
-                    href="/blogs"
-                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-100"
+                    href="/benefits"
+                    className="flex items-center justify-between px-3 py-3  -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                   >
-                    Blogs
-                  </Link>
-                  <Link
-                    onClick={closeMenu}
-                    href="/contact"
-                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-100"
-                  >
-                    Contact
+                    Benefits
+                    <span>
+                      <svg
+                        width="9"
+                        height="14"
+                        viewBox="0 0 9 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
                   </Link>
                 </div>
+                <ThemeButton
+                  onClick={() => router.push("/login")}
+                  type={ButtonType.SECONDARY}
+                  fullWidth
+                  className="mb-4 text-white"
+                >
+                  Log in
+                </ThemeButton>
+                <ThemeButton
+                  onClick={() => router.push("/login")}
+                  type={ButtonType.WHITE}
+                  fullWidth
+                >
+                  Sign up
+                </ThemeButton>
               </div>
             </div>
           </div>

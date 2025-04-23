@@ -8,11 +8,11 @@ import ThemeButton, { ButtonType } from "./components/ThemeButton";
 function Footer() {
   return (
     <footer>
-      <div className="container relative pt-24 pb-16 mx-auto">
+      <div className="container relative py-4 mx-auto md:pb-16 md:pt-24">
         <div className="grid grid-cols-12">
-          <div className="flex flex-col items-center justify-center col-span-12 gap-6">
+          <div className="flex flex-col items-center justify-center col-span-12 gap-4 md:gap-6">
             <Link className="" href="/home">
-              <Image src={Images.Footer.logo} alt="" />
+              <Image src={Images.Footer.logo} className="h-10" alt="" />
             </Link>
 
             <div className="flex flex-wrap justify-center gap-4 my-4 text-base font-medium text-neutral-600">
@@ -50,13 +50,13 @@ function Footer() {
                 Benefits
               </Link>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center w-full gap-2 px-4 md:px-auto md:w-auto md:flex-row">
               <input
                 placeholder="Enter your email"
-                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary  focus:outline-secondary block w-full min-w-[450px] p-3"
+                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary  focus:outline-secondary block w-full min-w-[300px] md:min-w-[450px] p-3"
               ></input>
               <ThemeButton
-                paddings="px-10 py-3"
+                paddings="px-10 py-3 w-full md:w-auto"
                 onClick={() => console.log("Subscribe")}
                 type={ButtonType.PRIMARY}
               >
@@ -68,9 +68,9 @@ function Footer() {
       </div>
       <div className="container mx-auto">
         <hr className="text-[#E9EAEB]" />
-        <div className="grid flex-col-reverse items-center grid-cols-12 py-7 md:flex-row">
+        <div className="grid flex-col-reverse items-center grid-cols-12 py-3 md:py-7 md:flex-row">
           <div className="col-span-12 md:col-span-6">
-            <div className="flex items-center md:mb-4 lg:mb-0">
+            <div className="flex items-center justify-center md:justify-start md:mb-4 lg:mb-0">
               <div>
                 <span className="block text-center md:text-start text-neutral-600">
                   © 2025 ConnectMd. All rights reserved.
