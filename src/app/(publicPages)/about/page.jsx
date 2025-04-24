@@ -15,15 +15,19 @@ const page = () => {
       iconColor: "#FFB4AD",
     },
     {
-      title: "Precision Through Personalization",
-      description: `No two patients are the same. That’s why we empower providers to craft individualized care strategies that respect not only the clinical facts but also the human behind them.`,
+      title: "Expertise with Empathy",
+      description: `Our national network of board-certified physicians goes beyond diagnosis. They listen,
+understand, and tailor care plans to reflect the patient’s needs, preferences, and lifestyle—
+whether rooted in conventional medicine, holistic therapies, or innovative treatments like
+peptides.`,
       bgColor: "bg-pale-aqua",
       image: Images.About.abt2,
       iconColor: "#C4CFFF",
     },
     {
-      title: "Whole-Person Insight",
-      description: `We give doctors a complete view of each patient’s health journey by securely retrieving and organizing medical records from across providers and time. With this depth of knowledge, physicians can spot patterns, connect the dots, and make truly informed recommendations.`,
+      title: "Precision Through Personalization",
+      description: `No two patients are the same. That’s why we empower providers to craft individualized care
+strategies that respect not only the clinical facts but also the human behind them.`,
       bgColor: "bg-tron-blue",
       image: Images.About.abt3,
       iconColor: "#93F7FF",

@@ -216,3 +216,14 @@ justify-content: center;
     99% { transform:translateY(-3%); }
     100% { transform:translateY(0); }
 }
+
+.show-on-large {
+  display: none;
+}
+
+@media (min-width: 1320px) {
+  .show-on-large {
+    display: block;
+  }
+}
+

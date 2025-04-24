@@ -85,7 +85,7 @@ const page = () => {
       </section>
       <section className="relative overflow-hidden bg-white">
         <Image
-          className="absolute z-10 hidden w-40 bounce bg-blend-multiply top-1/3 -rotate-12 md:block"
+          className="absolute z-10 w-40 bg-blend-multiply top-1/3 -rotate-12 show-on-large"
           src="images/HeartAnimate.svg"
           width={200}
           height={200}
@@ -93,7 +93,7 @@ const page = () => {
         ></Image>
 
         <Image
-          className="absolute z-10 hidden w-40 wobble bg-blend-multiply bottom-1/5 -rotate-12 md:block"
+          className="absolute z-10 w-40 bg-blend-multiply bottom-1/4 -rotate-12 show-on-large"
           src="images/Animate2.svg"
           width={200}
           height={200}
@@ -101,7 +101,7 @@ const page = () => {
         ></Image>
 
         <Image
-          className="absolute z-10 hidden w-40 rotate-45 hithere bg-blend-multiply end-0 top-1/3 md:block"
+          className="absolute z-10 w-40 rotate-45 show-on-large bg-blend-multiply end-0 top-1/3 "
           src="images/Animate3.svg"
           width={200}
           height={200}
@@ -109,7 +109,7 @@ const page = () => {
         ></Image>
 
         <Image
-          className="absolute z-10 hidden w-40 hithere bg-blend-multiply bottom-1/5 end-10 md:block"
+          className="absolute z-10 w-40 bg-blend-multiply bottom-1/4 show-on-large end-0 "
           src="images/Animate4.svg"
           width={200}
           height={200}

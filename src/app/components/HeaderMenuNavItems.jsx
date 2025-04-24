@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export const menuItems = [
   { label: "Home", href: "/home" },
   { label: "About", href: "/about" },
-  { label: "Meet Our Providers", href: "/meet" },
+  { label: "Meet C.A.R.E.", href: "/meet" },
   { label: "ConnectMD Difference", href: "/connectmd-difference" },
   { label: "Benefits", href: "/benefits" },
 ];
