@@ -39,7 +39,7 @@ const page = () => {
       >
         <div className="container flex flex-col items-center justify-center md:pt-40 pt-28 pb-0 mx-auto max-w-[1320px]">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto md:gap-12">
-            <div className="col-span-12 md:col-span-7 md:col-start-4">
+            <div className="col-span-12 md:col-span-8 md:col-start-3">
               <h1 className="text-3xl md:text-6xl font-bold text-center text-gray-800 md:leading-[72px]">
                 Expert Medical Insight,
                 <span className="px-3 font-extrabold text-secondary font-playfair">

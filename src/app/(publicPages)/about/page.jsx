@@ -192,10 +192,12 @@ const page = () => {
                       </div>
                     </div>
                     <div className="flex flex-col gap-4">
-                      <h2 className="text-4xl font-bold text-charcoal">
+                      <h2 className="text-2xl font-bold md:text-4xl text-charcoal">
                         {section.title}
                       </h2>
-                      <p className="text-lg">{section.description}</p>
+                      <p className="text-base md:text-lg">
+                        {section.description}
+                      </p>
                     </div>
                   </div>
                 </div>

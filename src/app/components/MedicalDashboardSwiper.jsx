@@ -45,13 +45,13 @@ const MedicalDashboardSwiper = ({ dashboardViews = [] }) => {
                 {view.imagePath ? (
                   <div className="col-span-10 col-start-2">
                     <div className="w-full h-full">
-                      <Image
+                      <img
                         className="!relative w-full h-full"
                         src={view.imagePath}
                         alt={view.title}
-                        width={500}
-                        height={500}
-                        priority={true}
+                        // width={500}
+                        // height={500}
+                        // priority={true}
                       />
                     </div>
                   </div>
