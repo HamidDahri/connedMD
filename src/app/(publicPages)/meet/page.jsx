@@ -44,7 +44,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <Image
           className="absolute z-10 hidden w-40 bounce bg-blend-multiply top-1/3 -rotate-12 md:block"
           src="images/HeartAnimate.svg"

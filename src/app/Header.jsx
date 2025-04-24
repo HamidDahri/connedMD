@@ -133,7 +133,6 @@ const Header = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="px-4 py-6 border-b-0 ">
                   {menuItems.map((item) => {
-                    const isActive = pathname === item.href;
                     return (
                       <Link
                         onClick={closeMenu}

@@ -4,6 +4,7 @@ import React from "react";
 import { Images } from "./ui/images";
 import Image from "next/image";
 import ThemeButton, { ButtonType } from "./components/ThemeButton";
+import { menuItems } from "./components/HeaderMenuNavItems";
 
 function Footer() {
   return (
@@ -21,39 +22,17 @@ function Footer() {
             </Link>
 
             <div className="flex flex-wrap justify-center gap-4 my-4 text-base font-medium md:gap-6 text-neutral-600">
-              <Link
-                href="/home"
-                className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
-              >
-                Home
-              </Link>
-              <Link
-                href="#farms"
-                className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
-              >
-                About
-              </Link>
-
-              <Link
-                href="#practices"
-                className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
-              >
-                Meet C.A.R.E.
-              </Link>
-
-              <Link
-                href="#varieties"
-                className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
-              >
-                ConnectMD Difference
-              </Link>
-
-              <Link
-                href="#benefits"
-                className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
-              >
-                Benefits
-              </Link>
+              {menuItems.map((item) => {
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
             <div className="flex flex-col items-center w-full gap-2 px-4 md:px-auto md:w-auto md:flex-row">
               <input
