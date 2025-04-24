@@ -33,15 +33,18 @@ const page = () => {
   ];
   return (
     <>
-      <section className="bg-[url(/images/heroBgPattern.svg)] bg-vista-white min-h-screen w-full bg-no-repeat bg-cover">
+      <section
+        id="container"
+        className="bg-[url(/images/heroBgPattern.svg)] bg-vista-white min-h-screen w-full bg-no-repeat bg-cover"
+      >
         <div className="container flex flex-col items-center justify-center md:pt-40 pt-28 pb-0 mx-auto max-w-[1320px]">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto md:gap-12">
             <div className="col-span-12 md:col-span-7 md:col-start-4">
               <h1 className="text-3xl md:text-6xl font-bold text-center text-gray-800 md:leading-[72px]">
-                Expert Medical Insight,{" "}
-                <span className="italic font-extrabold text-secondary font-playfair">
+                Expert Medical Insight,
+                <span className="px-3 font-extrabold text-secondary font-playfair">
                   personalized
-                </span>{" "}
+                </span>
                 to You
               </h1>
             </div>
@@ -80,7 +83,38 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="relative bg-white">
+        <Image
+          className="absolute z-10 hidden w-40 bounce bg-blend-multiply top-1/3 -rotate-12 md:block"
+          src="images/HeartAnimate.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 wobble bg-blend-multiply bottom-1/5 -rotate-12 md:block"
+          src="images/Animate2.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 rotate-45 hithere bg-blend-multiply end-0 top-1/3 md:block"
+          src="images/Animate3.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 hithere bg-blend-multiply bottom-1/5 end-10 md:block"
+          src="images/Animate4.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
         <div className="container flex flex-col items-center justify-center pt-8 md:pt-40 pb-0 mx-auto max-w-[1320px]">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto md:gap-12">
             <div className="col-span-12 md:col-span-10 md:col-start-2">
@@ -88,10 +122,10 @@ const page = () => {
                 How It Works
               </h2>
               <h1 className="text-3xl md:text-5xl  font-bold text-center text-gray-800 md:leading-[72px]">
-                We Make Your{" "}
-                <span className="font-extrabold text-rosePink font-playfair">
+                We Make Your
+                <span className="px-2 font-extrabold text-rosePink font-playfair">
                   health
-                </span>{" "}
+                </span>
                 Story Whole Again
               </h1>
             </div>
@@ -114,7 +148,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
       <section className="bg-gradient-to-b to-[#A8EDEA09] from-[#9BCFE570] rounded-t-4xl py-8 md:py-24">
         <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
@@ -124,7 +157,7 @@ const page = () => {
               </h2>
               <h3 className="my-3 text-3xl font-bold text-center text-gray-800 md:text-6xl">
                 Go
-                <span className="font-extrabold ps-2 text-primary font-playfair">
+                <span className="px-2 font-extrabold text-primary font-playfair">
                   beyond
                 </span>
                 Generic Healthcare
@@ -185,7 +218,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
       <section className="bg-white">
         <div className="container pb-8 mx-auto md:pb-24">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
@@ -306,7 +338,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
       <section className="relative py-8 overflow-hidden rounded-3xl md:rounded-4xl bg-gradient-to-r from-primary to-cyanBlue md:py-24">
         <Image
           src={Images.IndexPage.headercareBanner}
@@ -345,10 +376,6 @@ const page = () => {
               </div>
             </div>
             <div className="hidden col-span-6 md:block ">
-              {/* <Image
-                src={Images.IndexPage.healthcare}
-                alt="healthcare "
-              ></Image> */}
               <figure>
                 <AnimatedImage
                   src={Images.IndexPage.healthcare}

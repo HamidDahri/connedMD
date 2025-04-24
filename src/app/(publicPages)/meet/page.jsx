@@ -44,7 +44,38 @@ const page = () => {
         </div>
       </section>
 
-      <section>
+      <section className="relative">
+        <Image
+          className="absolute z-10 hidden w-40 bounce bg-blend-multiply top-1/3 -rotate-12 md:block"
+          src="images/HeartAnimate.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 wobble bg-blend-multiply bottom-1/5 -rotate-12 md:block"
+          src="images/Animate2.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 rotate-45 hithere bg-blend-multiply end-0 top-1/3 md:block"
+          src="images/Animate3.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
+
+        <Image
+          className="absolute z-10 hidden w-40 hithere bg-blend-multiply bottom-1/5 end-10 md:block"
+          src="images/Animate4.svg"
+          width={200}
+          height={200}
+          alt=""
+        ></Image>
         <div className="container flex flex-col items-center justify-center pt-8 pb-0 mx-auto border-b md:pt-24 md:pb-16 border-slate-300">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
             <div className="flex flex-col col-span-12 gap-4 md:col-span-10 md:col-start-2">

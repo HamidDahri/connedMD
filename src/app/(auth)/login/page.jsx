@@ -18,7 +18,7 @@ const page = () => {
             <div className="flex flex-col col-span-8 col-start-3 gap-6">
               <h2 className="text-5xl font-bold text-center text-white leading-14">
                 Expert Medical Insight,{" "}
-                <span className="italic font-playfair text-secondary">
+                <span className=" font-playfair text-secondary">
                   Personalized
                 </span>{" "}
                 to You
@@ -35,7 +35,12 @@ const page = () => {
           </div>
           <div className="relative flex flex-col items-center justify-center h-screen ">
             <Link href="/">
-              <Image alt="" className="mb-8" src={Images.Login.logo}></Image>
+              <Image
+                alt=""
+                as="image"
+                className="mb-8"
+                src={Images.Login.logo}
+              ></Image>
             </Link>
             <h1 className="mb-1 text-xl font-bold text-center text-gray-900 md:text-3xl md:mb-3">
               👋 Welcome Back!

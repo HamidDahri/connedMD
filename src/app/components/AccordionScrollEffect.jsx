@@ -151,7 +151,7 @@ const MedicalAccordion = () => {
                 <div className="overflow-hidden bg-white text rounded-xl md:rounded-3xl">
                   <div className="flex flex-wrap items-start justify-between p-4 md:p-10">
                     <div style={textContainerStyle}>
-                      <div className="text-base md:text-lg text-charcoal" s>
+                      <div className="text-base md:text-lg text-charcoal">
                         {item.text}
                       </div>
                     </div>

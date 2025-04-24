@@ -14,8 +14,9 @@ function Footer() {
             <Link className="" href="/home">
               <Image
                 src={Images.Footer.logo}
-                className="h-10 md:h-auto"
+                className="w-auto h-10 md:h-auto"
                 alt=""
+                as="image"
               />
             </Link>
 

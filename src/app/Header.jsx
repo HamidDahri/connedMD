@@ -38,9 +38,10 @@ const Header = () => {
               <span className="sr-only">Your Company</span>
               <Image
                 alt=""
-                className="hidden h-12 md:block"
+                className="hidden w-auto h-12 md:block"
                 src={Images.Header.logo}
                 priority={true}
+                as="image"
               />
 
               <Image
@@ -48,6 +49,7 @@ const Header = () => {
                 className="h-8 w-52 md:hidden"
                 src={Images.Login.logo}
                 priority={true}
+                as="image"
               />
             </Link>
           </div>
@@ -96,9 +98,14 @@ const Header = () => {
           ></div>
           <div className="fixed inset-y-0 right-0 z-20 w-full p-4 px-4 overflow-y-auto bg-white md:px-6 md:py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between pt-1.5 ">
-              <a href="#">
+              <a href="#" rel="preload">
                 <span className="sr-only">Your Company</span>
-                <Image alt="" className="h-8 w-52" src={Images.Login.logo} />
+                <Image
+                  alt=""
+                  as="image"
+                  className="h-8 w-52"
+                  src={Images.Login.logo}
+                />
               </a>
               <button
                 type="button"

@@ -6,6 +6,29 @@ import Image from "next/image";
 import ConnectmdIcon from "../../../../public/svg/ConnectmdIcon";
 
 const page = () => {
+  const aboutSections = [
+    {
+      title: "Whole-Person Insight",
+      description: `We give doctors a complete view of each patient’s health journey by securely retrieving and organizing medical records from across providers and time. With this depth of knowledge, physicians can spot patterns, connect the dots, and make truly informed recommendations.`,
+      bgColor: "bg-soft-pink",
+      image: Images.About.abt1,
+      iconColor: "#FFB4AD",
+    },
+    {
+      title: "Precision Through Personalization",
+      description: `No two patients are the same. That’s why we empower providers to craft individualized care strategies that respect not only the clinical facts but also the human behind them.`,
+      bgColor: "bg-pale-aqua",
+      image: Images.About.abt2,
+      iconColor: "#C4CFFF",
+    },
+    {
+      title: "Whole-Person Insight",
+      description: `We give doctors a complete view of each patient’s health journey by securely retrieving and organizing medical records from across providers and time. With this depth of knowledge, physicians can spot patterns, connect the dots, and make truly informed recommendations.`,
+      bgColor: "bg-tron-blue",
+      image: Images.About.abt3,
+      iconColor: "#93F7FF",
+    },
+  ];
   return (
     <>
       <section className="bg-[url(/images/heroBgPattern.svg)] bg-vista-white w-full bg-no-repeat bg-cover">
@@ -143,135 +166,51 @@ const page = () => {
             What We Stand For
           </h2>
 
-          <div className=" rounded-4xl bg-soft-pink">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-8">
-                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-6 md:p-12">
-                  <div className="relative flex items-center justify-center">
-                    <Image
-                      src={Images.About.iconWhiteBG}
-                      className="w-16 md:w-auto "
-                      alt=""
-                    />
-                    <div className="absolute hidden animate-spin md:block">
-                      <ConnectmdIcon fill="#FFB4AD" />
+          {aboutSections.map((section, index) => (
+            <div
+              key={index}
+              className={`rounded-3xl md:rounded-4xl ${section.bgColor}`}
+            >
+              <div className="grid grid-cols-12">
+                <div className="col-span-12 md:col-span-8">
+                  <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-6 md:p-12">
+                    <div className="relative flex items-center justify-center">
+                      <Image
+                        src={Images.About.iconWhiteBG}
+                        className="w-16 md:w-auto"
+                        alt=""
+                      />
+                      <div className="absolute hidden animate-spin md:block">
+                        <ConnectmdIcon fill={section.iconColor} />
+                      </div>
+                      <div className="absolute block md:hidden animate-spin">
+                        <ConnectmdIcon
+                          fill={section.iconColor}
+                          width="34"
+                          height="34"
+                        />
+                      </div>
                     </div>
-                    <div className="absolute block md:hidden animate-spin">
-                      <ConnectmdIcon fill="#FFB4AD" width="34" height="34" />
+                    <div className="flex flex-col gap-4">
+                      <h2 className="text-4xl font-bold text-charcoal">
+                        {section.title}
+                      </h2>
+                      <p className="text-lg">{section.description}</p>
                     </div>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <h2 className="text-4xl font-bold text-charcoal">
-                      Whole-Person Insight
-                    </h2>
-                    <p className="text-lg ">
-                      We give doctors a complete view of each patient’s health
-                      journey by securely retrieving and organizing medical
-                      records from across providers and time. With this depth of
-                      knowledge, physicians can spot patterns, connect the dots,
-                      and make truly informed recommendations. Expertise with
-                    </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-span-12 overflow-hidden md:col-span-4">
-                <div className="relative m-4 mb-0 md:m-12">
-                  <Image
-                    src={Images.About.abt1}
-                    alt=""
-                    className="top-0 w-full md:absolute"
-                  ></Image>
+                <div className="col-span-12 overflow-hidden md:col-span-4">
+                  <div className="relative m-4 mb-0 md:m-12">
+                    <Image
+                      src={section.image}
+                      alt=""
+                      className="top-0 w-full md:absolute"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className=" rounded-4xl bg-pale-aqua">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-8">
-                <div className="flex flex-col items-start justify-start gap-6 p-4 md:p-12">
-                  <div className="relative flex items-center justify-center">
-                    <Image
-                      src={Images.About.iconWhiteBG}
-                      className="w-16 md:w-auto "
-                      alt=""
-                    />
-
-                    <div className="absolute hidden animate-spin md:block">
-                      <ConnectmdIcon fill="#C4CFFF" />
-                    </div>
-                    <div className="absolute block md:hidden animate-spin">
-                      <ConnectmdIcon fill="#C4CFFF" width="34" height="34" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <h2 className="text-4xl font-bold text-charcoal">
-                      Precision Through Personalization
-                    </h2>
-                    <p className="text-lg ">
-                      No two patients are the same. That’s why we empower
-                      providers to craft individualized care strategies that
-                      respect not only the clinical facts but also the human
-                      behind them.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-12 overflow-hidden md:col-span-4">
-                <div className="relative m-4 mb-0 md:m-12">
-                  <Image
-                    src={Images.About.abt2}
-                    alt=""
-                    className="top-0 w-full md:absolute"
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className=" rounded-4xl bg-tron-blue">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 md:col-span-8">
-                <div className="flex flex-col items-start justify-start gap-4 p-4 md:gap-6 md:p-12">
-                  <div className="relative flex items-center justify-center">
-                    <Image
-                      src={Images.About.iconWhiteBG}
-                      className="w-16 md:w-auto "
-                      alt=""
-                    />
-
-                    <div className="absolute hidden animate-spin md:block">
-                      <ConnectmdIcon fill="#93F7FF" />
-                    </div>
-                    <div className="absolute block md:hidden animate-spin">
-                      <ConnectmdIcon fill="#93F7FF" width="34" height="34" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <h2 className="text-4xl font-bold text-charcoal">
-                      Whole-Person Insight
-                    </h2>
-                    <p className="text-lg ">
-                      We give doctors a complete view of each patient’s health
-                      journey by securely retrieving and organizing medical
-                      records from across providers and time. With this depth of
-                      knowledge, physicians can spot patterns, connect the dots,
-                      and make truly informed recommendations. Expertise with
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-12 overflow-hidden md:col-span-4">
-                <div className="relative m-4 md:m-12">
-                  <Image
-                    src={Images.About.abt3}
-                    alt=""
-                    className="top-0 w-full md:absolute"
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

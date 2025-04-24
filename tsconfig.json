@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/components/AnimateImage.jsx"  ],
+, "src/app/components/AnimateImage.jsx", "src/app/components/AnimatedIcon.jsx"  ],
   "exclude": [
     "node_modules"
   ]
