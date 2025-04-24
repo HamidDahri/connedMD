@@ -24,7 +24,7 @@ const ThemeButton = ({
   animateIconClasses,
 }) => {
   const baseClasses =
-    "font-normal rounded-full group border transition-colors flex justify-center items-center gap-2";
+    "font-normal rounded-full group border transition-colors flex justify-center items-center gap-2 duration-300";
 
   const widthClasses = fullWidth ? "w-full" : width ? width : "w-fit";
 

@@ -1,20 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import HeaderMenuNavItems from "./components/HeaderMenuNavItems";
+import HeaderMenuNavItems, { menuItems } from "./components/HeaderMenuNavItems";
 import Link from "next/link";
 import Image from "next/image";
 import { Images } from "./ui/images";
 import ThemeButton, { ButtonType } from "./components/ThemeButton";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const router = useRouter();
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
-  const toggleProductMenu = () => setIsProductMenuOpen((prev) => !prev);
-
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
@@ -124,92 +124,34 @@ const Header = () => {
             </div>
             <div className="flow-root mt-6">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="px-4 py-6 ">
-                  <Link
-                    onClick={closeMenu}
-                    href="/about"
-                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
-                  >
-                    About{" "}
-                    <span>
-                      <svg
-                        width="9"
-                        height="14"
-                        viewBox="0 0 9 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                <div className="px-4 py-6 border-b-0 ">
+                  {menuItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <Link
+                        onClick={closeMenu}
+                        key={item.href}
+                        href={item.href}
+                        className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                       >
-                        <path
-                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </Link>
-
-                  <Link
-                    onClick={closeMenu}
-                    href="/meet"
-                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
-                  >
-                    Meet C.A.R.E.
-                    <span>
-                      <svg
-                        width="9"
-                        height="14"
-                        viewBox="0 0 9 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </Link>
-                  <Link
-                    onClick={closeMenu}
-                    href="/connectmd-difference"
-                    className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
-                  >
-                    ConnectMD Difference
-                    <span>
-                      <svg
-                        width="9"
-                        height="14"
-                        viewBox="0 0 9 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </Link>
-                  <Link
-                    onClick={closeMenu}
-                    href="/benefits"
-                    className="flex items-center justify-between px-3 py-3  -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
-                  >
-                    Benefits
-                    <span>
-                      <svg
-                        width="9"
-                        height="14"
-                        viewBox="0 0 9 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </Link>
+                        {item.label}
+                        <span>
+                          <svg
+                            width="9"
+                            height="14"
+                            viewBox="0 0 9 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.86454 6.46875C8.14579 6.78125 8.14579 7.25 7.86454 7.53125L1.86454 13.5312C1.55204 13.8438 1.08329 13.8438 0.802042 13.5312C0.489542 13.25 0.489542 12.7812 0.802042 12.5L6.27079 7.03125L0.802042 1.53125C0.489542 1.25 0.489542 0.78125 0.802042 0.5C1.08329 0.1875 1.55204 0.1875 1.83329 0.5L7.86454 6.46875Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </Link>
+                    );
+                  })}
                 </div>
                 <ThemeButton
                   onClick={() => router.push("/login")}
@@ -218,13 +160,6 @@ const Header = () => {
                   className="mb-4 text-white"
                 >
                   Log in
-                </ThemeButton>
-                <ThemeButton
-                  onClick={() => router.push("/login")}
-                  type={ButtonType.WHITE}
-                  fullWidth
-                >
-                  Sign up
                 </ThemeButton>
               </div>
             </div>

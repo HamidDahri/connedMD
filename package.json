@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.32",
     "gsap": "^3.12.7",
     "next": "15.3.1",
     "next-images": "^1.8.5",

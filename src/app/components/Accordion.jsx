@@ -73,7 +73,7 @@ const Accordion = () => {
       {faqItems.map((item, index) => (
         <div
           key={index}
-          className={`flex flex-col gap-6 p-3 ${
+          className={`flex flex-col gap-6 p-3 transition duration-700 ease-in-out ${
             activeIndex === index ? "bg-primary" : "bg-alice-blue"
           } md:p-9 md:pb-10 rounded-2xl md:rounded-3xl`}
           onClick={() => handleToggle(index)}
@@ -104,12 +104,14 @@ const Accordion = () => {
                 </h5>
               </div>
             </div>
-            <div className="relative flex justify-center flex-shrink-0 w-5 h-5 px-4 text-base font-medium rounded-full rtl:pb-3 ltr:pt-0 md:text-xl ">
-              <span className="block border-transparent rounded-full md:border-4 group-hover:border-4 group-hover:border-white/20">
+            <div className="relative flex justify-center flex-shrink-0 px-4 text-base font-medium rounded-full md:w-5 md:h-5 rtl:pb-3 ltr:pt-0 md:text-xl ">
+              <span className="absolute top-0 rounded-full ">
                 {activeIndex === index ? (
-                  <AccordionIcon />
+                  <span className="flexs">
+                    <AccordionIcon />
+                  </span>
                 ) : (
-                  <span className="block -rotate-180">
+                  <span className="flex -rotate-180 ">
                     <AccordionIcon />
                   </span>
                 )}

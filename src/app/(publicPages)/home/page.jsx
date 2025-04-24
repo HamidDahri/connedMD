@@ -3,7 +3,7 @@ import ThemeButton, { ButtonType } from "../../components/ThemeButton";
 import { Images } from "../../ui/images";
 import Image from "next/image";
 import MedicalDashboardSwiper from "../../components/MedicalDashboardSwiper";
-
+import AnimatedImage from "../../components/AnimateImage";
 const page = () => {
   const dashboardViews = [
     {
@@ -204,7 +204,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -220,7 +220,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -237,7 +237,7 @@ const page = () => {
             </div>
 
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -254,7 +254,7 @@ const page = () => {
             </div>
 
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -271,7 +271,7 @@ const page = () => {
             </div>
 
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -288,7 +288,7 @@ const page = () => {
             </div>
 
             <div className="col-span-12 md:col-span-4">
-              <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
+              <div className="flex flex-col items-center justify-center gap-4 p-6 transition-all duration-500 ease-in-out bg-white cursor-pointer rounded-3xl hover:bg-primary group">
                 <Image
                   alt="certified"
                   className="w-16 md:w-24 drop-shadow-xl"
@@ -344,11 +344,18 @@ const page = () => {
                 </ThemeButton>
               </div>
             </div>
-            <div className="hidden col-span-6 md:block">
-              <Image
+            <div className="hidden col-span-6 md:block ">
+              {/* <Image
                 src={Images.IndexPage.healthcare}
                 alt="healthcare "
-              ></Image>
+              ></Image> */}
+              <figure>
+                <AnimatedImage
+                  src={Images.IndexPage.healthcare}
+                  alt=""
+                  className="img-fluid mbm-darken d-lg-block d-none img-move"
+                ></AnimatedImage>
+              </figure>
             </div>
           </div>
         </div>
