@@ -14,7 +14,7 @@ const page = () => {
     <section className="w-full ">
       <div>
         <div className="grid xs:grid-cols-1 md:grid-cols-2 ">
-          <div className="items-center justify-center hidden h-screen grid-cols-12 md:grid bg-primary">
+          <div className="items-center justify-center hidden h-screen grid-cols-12 md:grid bg-gradient-to-b from-primaryExtraDark to-primary">
             <div className="flex flex-col col-span-8 col-start-3 gap-6">
               <h2 className="text-5xl font-bold text-center text-white leading-14">
                 Expert Medical Insight,{" "}
