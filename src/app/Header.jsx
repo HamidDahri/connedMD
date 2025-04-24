@@ -170,7 +170,7 @@ const Header = () => {
                   </Link>
                   <Link
                     onClick={closeMenu}
-                    href="/connectmd_difference"
+                    href="/connectmd-difference"
                     className="flex items-center justify-between px-3 py-3 -mx-3 text-base font-normal leading-7 rounded-lg text-cinder border-b-[1px] border-slate-200 hover:bg-gray-100"
                   >
                     ConnectMD Difference

@@ -10,7 +10,7 @@ const poppins_init = Poppins({
 
 const Playfair_Display_init = Playfair_Display({
   // weight: ["400", "500", "600", "700"],
-  // style: ["normal"],
+   style: ["italic"],
   subsets: ["latin"],
   // display: "swap",
   variable: "--playfair",

@@ -1,4 +1,4 @@
-import heroImage from "/public/images/heroImage.png";
+import heroImage from "/public/images/heroImage.svg";
 import app1 from '/public/images/app1.svg'
 import app2 from '/public/images/app2.svg'
 import app3 from '/public/images/app3.svg'

@@ -6,6 +6,7 @@ import ThemeButton, { ButtonType } from "../../components/ThemeButton";
 import ThemeInput, { InputType } from "../../components/ThemeInput";
 import CheckBoxWithLabel from "../../components/CheckBoxWIthLabel";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const page = () => {
   const [isChecked, setIsChecked] = useState(false);
   const router = useRouter();
@@ -33,7 +34,9 @@ const page = () => {
             </div>
           </div>
           <div className="relative flex flex-col items-center justify-center h-screen ">
-            <Image alt="" className="mb-8" src={Images.Login.logo}></Image>
+            <Link href="/">
+              <Image alt="" className="mb-8" src={Images.Login.logo}></Image>
+            </Link>
             <h1 className="mb-1 text-xl font-bold text-center text-gray-900 md:text-3xl md:mb-3">
               👋 Welcome Back!
             </h1>

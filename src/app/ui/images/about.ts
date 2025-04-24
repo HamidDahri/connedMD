@@ -3,7 +3,7 @@ import iconWhiteBG from '/public/images/whiteRoundedIcon.svg'
 import abt1 from '/public/images/about1.svg'
 import abt2 from '/public/images/about2.svg'
 import abt3 from '/public/images/about3.svg'
-import whyMattersBanner from '/public/images/whyMattersBanner.png'
+import whyMattersBanner from '/public/images/heroImage.svg'
 import aboutFooterBanner from '/public/images/aboutFooterBanner.jpg'
 export const AboutImages = {
   about: aboutmockup,

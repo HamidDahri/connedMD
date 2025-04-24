@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,88 +10,48 @@ const MedicalAccordion = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".accordions",
-        pin: true,
-        pinSpacing: false,
-        start: "top 10%",
-        end: "bottom 30%",
-        scrub: 0.5,
-        ease: "linear",
-        // markers: true,
-      },
-    });
+    // Only initialize ScrollTrigger if the screen width is greater than 768px
+    if (window.innerWidth > 768) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".accordions",
+          pin: true,
+          pinSpacing: false,
+          start: "top 10%",
+          end: "bottom 450px",
+          scrub: 0.5,
+          ease: "linear",
+          // markers: true,
+        },
+      });
 
-    tl.to(
-      ".accordion .text",
-      {
-        height: 0,
-        paddingBottom: 0,
-        opacity: 0,
-        stagger: 0.5,
-        duration: 0.5,
-      },
-      0.1
-    ).to(
-      ".accordion",
-      {
-        marginBottom: -30,
-        stagger: 0,
-      },
-      "<"
-    );
+      tl.to(
+        ".accordion .text",
+        {
+          height: 0,
+          paddingBottom: 0,
+          opacity: 0,
+          stagger: 0.5,
+          duration: 0.5,
+        },
+        0.1
+      ).to(
+        ".accordion",
+        {
+          marginBottom: -30,
+          stagger: 0,
+        },
+        "<"
+      );
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    }
   }, []);
-  const wrapperStyle = {
-    background: "white",
-    paddingTop: "40px",
-  };
 
   const contentStyle = {
     margin: "0 auto",
-  };
-
-  const titleRowStyle = {
-    display: "flex",
-    alignItems: "center",
-    marginBottom: "16px",
-  };
-
-  const numberStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "28px",
-    height: "28px",
-    borderRadius: "50%",
-    background: "#ffffff",
-    color: "#1f2937",
-    fontWeight: "bold",
-    marginRight: "12px",
-  };
-
-  const titleStyle = {
-    fontSize: "1.25rem",
-    fontWeight: "600",
-    color: "#1f2937",
-  };
-
-  const textStyle = {
-    fontSize: "1rem",
-    color: "#4b5563",
-    lineHeight: "1.6",
-  };
-
-  const contentContainerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    flexWrap: "wrap",
-    padding: "40px",
   };
 
   const textContainerStyle = {
@@ -156,7 +115,11 @@ const MedicalAccordion = () => {
   ];
 
   return (
-    <div id="wrapper" ref={wrapperRef} className="!pb-12" style={wrapperStyle}>
+    <div
+      id="wrapper"
+      ref={wrapperRef}
+      className="!md:pb-12 pt-0 md:pt-10 bg-white"
+    >
       <div
         id="content"
         className="container mx-auto"
@@ -165,36 +128,30 @@ const MedicalAccordion = () => {
       >
         <div className="pin-wrapper">
           <div className="accordions">
-            <h2 className="mb-4 text-6xl font-semibold text-center text-gray-800">
+            <h2 className="mb-4 text-3xl font-bold text-center text-gray-800 md:text-6xl md:mb-12">
               What Sets Us Apart
             </h2>
             {accordionData.map((item, idx) => (
               <div
-                className="accordion"
+                className="p-3 mb-4 overflow-hidden shadow accordion md:p-6 rounded-xl"
                 key={idx}
                 style={{
                   backgroundColor: item.backgroundColor,
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.05)",
-                  padding: "24px",
-                  marginBottom: "16px",
                   transition: "all 0.3s ease",
-                  overflow: "hidden",
                 }}
               >
-                <div style={titleRowStyle}>
-                  <div style={numberStyle}>{item.number}</div>
-                  <div
-                    className="text-3xl font-semibold text-neutral-800 title"
-                    style={titleStyle}
-                  >
+                <div className="flex items-start mb-2 md:mb-4 md:items-center">
+                  <div className="flex items-center justify-center mr-3 font-bold bg-white rounded-full shrink-0 w-7 h-7 text-primaryExtraDark">
+                    {item.number}
+                  </div>
+                  <div className="text-base font-semibold md:text-2xl text-neutral-800 title">
                     {item.title}
                   </div>
                 </div>
-                <div className="overflow-hidden bg-white text rounded-3xl">
-                  <div style={contentContainerStyle}>
+                <div className="overflow-hidden bg-white text rounded-xl md:rounded-3xl">
+                  <div className="flex flex-wrap items-start justify-between p-4 md:p-10">
                     <div style={textContainerStyle}>
-                      <div className="text-lg text-charcoal" style={textStyle}>
+                      <div className="text-base md:text-lg text-charcoal" s>
                         {item.text}
                       </div>
                     </div>

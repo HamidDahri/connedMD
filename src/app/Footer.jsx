@@ -12,10 +12,14 @@ function Footer() {
         <div className="grid grid-cols-12">
           <div className="flex flex-col items-center justify-center col-span-12 gap-4 md:gap-6">
             <Link className="" href="/home">
-              <Image src={Images.Footer.logo} className="h-10" alt="" />
+              <Image
+                src={Images.Footer.logo}
+                className="h-10 md:h-auto"
+                alt=""
+              />
             </Link>
 
-            <div className="flex flex-wrap justify-center gap-4 my-4 text-base font-medium text-neutral-600">
+            <div className="flex flex-wrap justify-center gap-4 my-4 text-base font-medium md:gap-6 text-neutral-600">
               <Link
                 href="/home"
                 className="hover:text-neutral-800 hover:underline hover:underline-offset-4"
@@ -78,7 +82,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center col-span-12 gap-3 mb-3 text-neutral-600 md:col-span-6 lg:justify-end md:mb-auto">
+          <div className="flex items-center justify-center col-span-12 gap-4 mb-3 text-neutral-600 md:col-span-6 lg:justify-end md:mb-auto">
             <Link
               href=""
               className="hover:text-neutral-800 hover:underline hover:underline-offset-4"

@@ -40,12 +40,12 @@ const page = () => {
               <h1 className="text-3xl md:text-6xl font-bold text-center text-gray-800 md:leading-[72px]">
                 Expert Medical Insight,{" "}
                 <span className="italic font-extrabold text-secondary font-playfair">
-                  Personalized
+                  personalized
                 </span>{" "}
                 to You
               </h1>
             </div>
-            <div className="col-span-8 col-start-3">
+            <div className="col-span-12 md:col-span-8 md:col-start-3">
               <p className="text-base text-center text-gray-800 md:text-lg">
                 ConnectMD connects you with a nationwide network of
                 <strong className="px-2">2,000+</strong>
@@ -87,10 +87,10 @@ const page = () => {
               <h2 className="text-base font-semibold text-center text-rosePink">
                 How It Works
               </h2>
-              <h1 className="text-3xl md:text-5xl  font-semibold text-center text-gray-800 md:leading-[72px]">
+              <h1 className="text-3xl md:text-5xl  font-bold text-center text-gray-800 md:leading-[72px]">
                 We Make Your{" "}
-                <span className="italic text-rosePink font-playfair">
-                  Health
+                <span className="font-extrabold text-rosePink font-playfair">
+                  health
                 </span>{" "}
                 Story Whole Again
               </h1>
@@ -122,9 +122,12 @@ const page = () => {
               <h2 className="text-xl font-semibold text-center md:text-2xl text-primary">
                 Why ConnectMD
               </h2>
-              <h3 className="my-3 text-3xl font-semibold text-center text-gray-800 md:text-6xl">
-                Go <span className="italic font-playfair">Beyond</span> Generic
-                Healthcare
+              <h3 className="my-3 text-3xl font-bold text-center text-gray-800 md:text-6xl">
+                Go
+                <span className="font-extrabold ps-2 text-primary font-playfair">
+                  beyond
+                </span>
+                Generic Healthcare
               </h3>
               <h4 className="text-base font-normal text-center text-gray-800 md:text-lg">
                 Most virtual care focuses on symptoms. We focus on you.
@@ -187,9 +190,9 @@ const page = () => {
         <div className="container pb-8 mx-auto md:pb-24">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
             <div className="flex justify-center col-span-12 ">
-              <div className="md:w-[85%] ">
-                <h3 className="my-3 text-3xl font-semibold text-center text-gray-800 md:text-6xl">
-                  The <span className="text-secondary">ConnectMD</span>{" "}
+              <div className="md:w-[85%] w-full ">
+                <h3 className="my-3 text-3xl font-bold text-center text-gray-800 md:text-6xl">
+                  The <span className=" text-secondary">ConnectMD</span>{" "}
                   Advantage
                 </h3>
                 <p className="mb-4 text-base text-center text-gray-800 md:text-lg">
@@ -204,7 +207,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.certified}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -220,7 +223,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.secure}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -237,7 +240,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.history}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -254,7 +257,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.treament}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -271,7 +274,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.therapy}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -288,7 +291,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-3xl hover:bg-gradient-to-b from-primary to-cyanBlue group">
                 <Image
                   alt="certified"
-                  className="drop-shadow-xl"
+                  className="w-16 md:w-24 drop-shadow-xl"
                   src={Images.IndexPage.nationwide}
                 ></Image>
                 <h2 className="px-3 font-semibold text-center text-lg2 group-hover:text-white">
@@ -311,12 +314,12 @@ const page = () => {
           className="absolute duration-3000 -end-24 md:-end-72 animate-spin"
         ></Image>
         <div className="container mx-auto">
-          <div className="grid items-center justify-center grid-cols-12 gap-4 px-4 md:px-auto ">
+          <div className="grid items-center justify-center grid-cols-12 gap-4 px-4 md:gap-16 md:px-auto ">
             <div className="flex flex-col col-span-12 gap-4 md:col-span-6 md:gap-8">
-              <h2 className="mb-3 text-3xl font-semibold text-center text-white md:mb-5 md:text-start md:text-6xl">
+              <h2 className="mb-3 text-3xl font-bold text-center text-white md:mb-5 md:text-start md:text-6xl">
                 Redefining{" "}
-                <span className="italic text-secondary font-playfair">
-                  Modern
+                <span className="font-extrabold text-secondary font-playfair">
+                  modern
                 </span>{" "}
                 Healthcare
               </h2>
@@ -332,12 +335,14 @@ const page = () => {
                 can trust.
               </p>
 
-              <ThemeButton
-                paddings="px-10 py-2.5 w-full md:w-auto "
-                type={ButtonType.WHITE}
-              >
-                Start Your Journey Today
-              </ThemeButton>
+              <div>
+                <ThemeButton
+                  paddings="px-10 py-2.5 w-full md:w-fit "
+                  type={ButtonType.WHITE}
+                >
+                  Start Your Journey Today
+                </ThemeButton>
+              </div>
             </div>
             <div className="hidden col-span-6 md:block">
               <Image

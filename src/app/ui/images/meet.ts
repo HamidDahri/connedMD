@@ -1,4 +1,4 @@
-import whyMattersBanner from '/public/images/MeetwhyMattersBanner.png'
+import whyMattersBanner from '/public/images/MeetwhyMattersBanner.svg'
 import privacyTrustBanner from '/public/images/privacyTrustBanner.png'
 import careImg1 from '/public/images/careImg1.svg'
 import careImg2 from '/public/images/careImg2.svg'

@@ -25,11 +25,11 @@ const page = () => {
       <section className="bg-[url(/images/heroBgPattern.svg)] bg-vista-white w-full bg-no-repeat bg-cover">
         <div className="container flex flex-col items-center justify-center pb-8 mx-auto md:pt-40 pt-28 md:pb-24">
           <div className="grid grid-cols-12 gap-4 px-4 md:gap-10 md:px-auto">
-            <div className="col-span-12 md:col-span-8 md:col-start-3">
+            <div className="flex flex-col col-span-12 gap-4 md:col-span-8 md:col-start-3">
               <h1 className="text-lg font-semibold text-center md:text-2xl text-primary">
                 Meet C.A.R.E.™ — The ConnectMD AI Advantage
               </h1>
-              <h2 className="text-3xl md:text-6xl font-semibold text-center text-gray-800 md:leading-[72px]">
+              <h2 className="text-3xl md:text-6xl font-bold text-center text-gray-800 md:leading-[72px]">
                 Your Health. Your History. Your Answers.
               </h2>
             </div>
@@ -45,13 +45,13 @@ const page = () => {
       </section>
 
       <section>
-        <div className="container flex flex-col items-center justify-center pt-8 pb-0 mx-auto md:pt-24 ">
-          <div className="grid grid-cols-12 gap-4 px-4 md:gap-12 md:px-auto">
-            <div className="col-span-12 md:col-span-12 md:col-start-2">
+        <div className="container flex flex-col items-center justify-center pt-8 pb-0 mx-auto border-b md:pt-24 md:pb-16 border-slate-300">
+          <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
+            <div className="flex flex-col col-span-12 gap-4 md:col-span-10 md:col-start-2">
               <h2 className="text-base font-semibold text-center text-rosePink">
                 Introducing C.A.R.E.™
               </h2>
-              <h3 className="md:text-5xl text-3xl font-semibold text-center text-gray-800 md:leading-[72px]">
+              <h3 className="md:text-5xl text-3xl font-bold text-center text-gray-800 md:leading-[72px]">
                 Clinical AI for Review & Engagement
               </h3>
             </div>
@@ -71,13 +71,13 @@ const page = () => {
         </div>
       </section>
 
-      <section className="py-8 md:py-24">
+      <section className="py-8 pt-12 md:pb-24">
         <div className="container flex flex-col gap-4 mx-auto md:gap-8">
-          <h3 className="text-3xl md:text-5xl font-semibold text-center text-slate-900 leading-[72px]">
+          <h3 className="text-3xl md:text-6xl font-bold text-center text-slate-900 leading-[72px]">
             What C.A.R.E. Can Do
           </h3>
 
-          <div className="grid items-center grid-cols-12 gap-4 px-4 md:gap-8 md:px-auto">
+          <div className="grid items-center grid-cols-12 gap-4 px-4 md:gap-16 md:px-auto">
             <div className="flex flex-col order-1 col-span-12 gap-4 md:col-span-6 md:order-1">
               <h3 className="text-2xl font-bold text-gray-900 md:text-4xl">
                 Speed Up the Path to Diagnosis
@@ -103,7 +103,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex flex-col order-3 col-span-12 gap-4 mt-4 md:mt-auto md:col-span-6 md:order-4">
+            <div className="flex flex-col items-center justify-center order-3 h-full col-span-12 gap-4 mt-4 md:mt-auto md:col-span-6 md:order-4">
               <h3 className="text-3xl font-bold text-gray-900 md:text-4xl">
                 Help Physicians Build Smarter Treatment Plans
               </h3>
@@ -128,7 +128,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex flex-col order-5 col-span-12 gap-4 mt-4 md:col-span-6 md:mt-auto md:order-5">
+            <div className="flex flex-col items-start justify-center order-5 h-full col-span-12 gap-4 mt-4 md:col-span-6 md:mt-auto md:order-5">
               <h3 className="text-3xl font-bold text-gray-900 md:text-4xl">
                 Chat With Your Medical Records
               </h3>
@@ -160,8 +160,8 @@ const page = () => {
       <section className="relative py-8 overflow-hidden md:py-24 rounded-4xl bg-red-50">
         <div className="container mx-auto">
           <div className="grid items-center justify-center grid-cols-12 gap-4 px-4 md:px-auto">
-            <div className="flex flex-col col-span-12 gap-4 md:col-span-10 md:col-start-2 md:gap-8">
-              <h2 className="mb-0 text-3xl font-semibold text-center md:mb-5 md:text-6xl text-slate-900">
+            <div className="flex flex-col col-span-12 gap-4 md:col-span-10 md:col-start-2 ">
+              <h2 className="mb-0 text-3xl font-bold text-center md:mb-5 md:text-6xl text-slate-900">
                 Why It Matters
               </h2>
               <p className="text-base text-center text-gray-800 md:text-lg">
@@ -169,7 +169,7 @@ const page = () => {
                 ConnectMD, we believe in proactive care that puts patients in
                 the driver’s seat. C.A.R.E.™ is a key part of that vision.
               </p>
-              <p className="text-base text-center text-gray-800 md::text-lg">
+              <p className="text-base text-center text-gray-800 md:text-lg">
                 With the support of smart, secure AI, we’re making it easier for
                 doctors to deliver precision care—and for patients to feel
                 informed and empowered every step of the way
@@ -198,7 +198,7 @@ const page = () => {
       <section className="pt-8 md:pt-24">
         <div className="container mx-auto md:border-b md:pb-12 md:border-b-slate-300">
           <div className="grid items-center justify-center grid-cols-12 gap-8 px-4 md:px-auto">
-            <div className="flex flex-col col-span-12 gap-4 md:col-span-6 md:gap-8">
+            <div className="flex flex-col col-span-12 gap-4 md:col-span-6">
               <h2 className="mb-0 text-3xl font-bold md:mb-5 md:text-6xl text-slate-900">
                 Built on Trust and Privacy
               </h2>
@@ -218,7 +218,7 @@ const page = () => {
 
               <ThemeButton
                 type={ButtonType.PRIMARY}
-                paddings="px-10 py-2.5 w-full md:w-auto"
+                paddings="px-10 py-2.5 w-full md:w-fit"
               >
                 <span className="font-semibold">
                   Experience C.A.R.E.™ Today

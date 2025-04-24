@@ -12,17 +12,17 @@ const page = () => {
         <div className="container flex flex-col gap-4 pb-8 mx-auto md:pb-24 md:gap-8 pt-28 md:pt-40">
           <div className="grid grid-cols-12 px-4 md:px-auto">
             <div className="flex flex-col col-span-12 gap-4 mb-4 md:mb-auto md:col-span-7 md:gap-6">
-              <h1 className="text-3xl md:text-[52px] text-center md:text-start font-semibold  text-gray-800 md:leading-[60px]">
+              <h1 className="text-3xl md:text-[52px] text-center md:text-start font-bold  text-gray-800 md:leading-[60px]">
                 Personalized{" "}
-                <span className="italic text-secondary font-playfair">
-                  Medical Expertise,
+                <span className="italic font-extrabold text-secondary font-playfair">
+                  medical expertise,
                 </span>{" "}
                 Powered by Complete Health Histories
               </h1>
 
               <ThemeButton
                 type={ButtonType.PRIMARY}
-                paddings="px-10 py-2.5 w-full md:w-auto"
+                paddings="px-10 py-2.5 w-full md:w-fit"
                 onClick={() => console.log("Learn How It Works")}
               >
                 Learn How It Works
@@ -41,7 +41,7 @@ const page = () => {
           </div>
 
           <div className="grid grid-cols-12 gap-4 px-4 md:gap-6 md:px-auto">
-            <div className="flex flex-col col-span-12 gap-4 md:flex-row md:gap-6 md:col-span-6">
+            <div className="flex flex-col col-span-12 gap-4 md:gap-6 md:col-span-6">
               <p className="text-base text-gray-800 md:text-lg ">
                 Patients don’t always remember every detail of their medical
                 history, which can make it difficult for doctors to get the full
@@ -54,12 +54,12 @@ const page = () => {
               <p className="text-lg text-gray-800 ">
                 Unlike traditional telehealth services focused on symptoms
                 alone,
-                <strong>ConnectMD</strong> offers thoughtful medical reviews and
-                treatment strategies tailored to each individual’s history,
-                preferences, and values. Whether a patient prefers conventional
-                medicine, holistic therapies, or cutting-edge modalities like
-                peptides, our platform supports care that is both clinically
-                sound and personally meaningful.
+                <strong className="px-2">ConnectMD</strong>offers thoughtful
+                medical reviews and treatment strategies tailored to each
+                individual’s history, preferences, and values. Whether a patient
+                prefers conventional medicine, holistic therapies, or
+                cutting-edge modalities like peptides, our platform supports
+                care that is both clinically sound and personally meaningful.
               </p>
             </div>
             <div className="flex flex-col col-span-12 gap-4 md:gap-6 md:col-span-6">
@@ -99,15 +99,17 @@ const page = () => {
               <div className="mb-8 md:px-12 md:mb-16">
                 <Image src={Images.About.about} alt="" />
               </div>
-              <span className="text-base text-center md:text-2xl block w-fit mb-6 bg-gradient-to-r from-[#C1DFC4] to-[#DEECDD] px-4 md:px-8 py-2.5 rounded-full text-primaryExtraDark ">
+              <span className="text-base text-center md:text-xl block w-fit mb-6 bg-gradient-to-r from-[#C1DFC4] to-[#DEECDD] px-4 md:px-8 py-2.5 rounded-full text-primaryExtraDark ">
                 At <strong>ConnectMD</strong>, our mission is simple
               </span>
 
               <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-semibold text-white md:text-6xl md:leading-16">
+                <h2 className="text-3xl font-bold text-white md:text-6xl md:leading-16">
                   To help people live healthier, more fulfilling lives by{" "}
-                  <span className="text-moon-mist">making expert</span> medical
-                  guidance more personalized, accessible, and informed.
+                  <span className="font-extrabold underline text-moon-mist underline-offset-8 font-playfair">
+                    making expert
+                  </span>{" "}
+                  medical guidance more personalized, accessible, and informed.
                 </h2>
                 <p className="text-base text-gray-300 md:text-xl md:leading-9">
                   We believe that every patient deserves care rooted in
@@ -123,7 +125,7 @@ const page = () => {
                 <span className="hidden animate-spin md:block">
                   <ConnectmdIcon />
                 </span>
-                <span className="block animate-spin md:hidden">
+                <span className="block animate-spin2 md:hidden">
                   <ConnectmdIcon width="34" height="34" />
                 </span>
                 <h2 className="text-xl font-bold text-center md:text-4xl text-primaryExtraDark">
@@ -136,7 +138,7 @@ const page = () => {
       </section>
 
       <section className="pb-24">
-        <div className="container flex flex-col gap-4 px-4 mx-auto md:px-auto md:gap-10">
+        <div className="container flex flex-col gap-4 px-4 mx-auto md:px-0 md:gap-10">
           <h2 className="text-3xl font-bold text-center md:text-6xl">
             What We Stand For
           </h2>
@@ -204,14 +206,13 @@ const page = () => {
                   </div>
                   <div className="flex flex-col gap-4">
                     <h2 className="text-4xl font-bold text-charcoal">
-                      Whole-Person Insight
+                      Precision Through Personalization
                     </h2>
                     <p className="text-lg ">
-                      We give doctors a complete view of each patient’s health
-                      journey by securely retrieving and organizing medical
-                      records from across providers and time. With this depth of
-                      knowledge, physicians can spot patterns, connect the dots,
-                      and make truly informed recommendations. Expertise with
+                      No two patients are the same. That’s why we empower
+                      providers to craft individualized care strategies that
+                      respect not only the clinical facts but also the human
+                      behind them.
                     </p>
                   </div>
                 </div>
@@ -274,11 +275,11 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b to-[#A8EDEA09] from-[#9BCFE570] rounded-t-4xl pt-8 md:pt-24">
+      <section className="bg-gradient-to-b to-[#A8EDEA09] from-[#9BCFE570] rounded-t-4xl py-8  md:py-24">
         <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-4 px-4 md:px-auto">
             <div className="flex flex-col items-center justify-center col-span-12 gap-4 mb-2 md:mb-12">
-              <h3 className="text-3xl font-semibold text-center text-gray-800 md:my-3 md:text-6xl">
+              <h3 className="text-3xl font-bold text-center text-gray-800 md:my-3 md:text-6xl">
                 Why It Matters
               </h3>
               <h4 className="text-base font-normal text-center text-gray-800 md:w-3/4 md:text-lg">
@@ -315,7 +316,7 @@ const page = () => {
         <div className="container mx-auto">
           <div className="grid items-center justify-center grid-cols-12 gap-4 px-4 md:px-auto ">
             <div className="flex flex-col col-span-12 gap-4 md:gap-8 md:col-span-6">
-              <h2 className="mb-0 text-3xl font-semibold text-center text-white md:mb-5 md:text-start md:text-6xl">
+              <h2 className="mb-0 text-3xl font-bold text-center text-white md:mb-5 md:text-start md:text-6xl">
                 Looking <span className="text-emerald-400">Ahead</span>
               </h2>
               <p className="text-base text-center text-white md:text-start md:text-lg">
